@@ -1,0 +1,133 @@
+/* @import url("https://fonts.googleapis.com/css2?family=Rubik:wght@400;500&family=Work+Sans:wght@400;500;600&display=swap"); */
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* fonts */
+@font-face {
+  font-family: "Graphik";
+  src: local("Graphik"), url(./fonts/GraphikRegular.otf) format("truetype");
+  font-weight: normal;
+}
+@font-face {
+  font-family: "GraphikBlack";
+  src: local("Graphik"), url(./fonts/GraphikBlack.otf) format("truetype");
+  font-weight: normal;
+}
+@font-face {
+  font-family: "GraphikBold";
+  src: local("Graphik"), url(./fonts/GraphikBold.otf) format("truetype");
+  font-weight: normal;
+}
+@font-face {
+  font-family: "GraphikMedium";
+  src: local("Graphik"), url(./fonts/GraphikMedium.otf) format("truetype");
+  font-weight: normal;
+}
+@font-face {
+  font-family: "GraphikSemibold";
+  src: local("Graphik"), url(./fonts/GraphikSemibold.otf) format("truetype");
+  font-weight: normal;
+}
+@font-face {
+  font-family: "Graphik";
+  src: local("Graphik"), url(./fonts/GraphikRegular.otf) format("truetype");
+  font-weight: normal;
+}
+
+/* brand */
+.brand {
+  @apply w-2/3 h-5 object-contain;
+}
+
+.brand-footer {
+  @apply w-auto h-5 object-contain self-start;
+}
+
+/* avatar */
+.avatar {
+  @apply h-10 w-10 rounded-full object-cover object-top;
+}
+
+/* navigation */
+.nav > h6 {
+  @apply text-white text-opacity-40;
+}
+.nav > .active {
+  @apply text-opacity-100 border-b-2 border-white h-full;
+}
+
+.nav-link-item {
+  @apply cursor-pointer h-full flex items-center border-b-4 border-transparent hover:border-secondary;
+}
+
+
+.cta {
+  @apply flex justify-center space-x-6 items-center w-full;
+}
+
+.nav {
+  @apply bg-white max-w-7xl mx-auto grid grid-cols-8 w-full h-full;
+}
+
+.asset-icon {
+  @apply w-9 h-9 rounded-full;
+}
+
+/* buttons */
+.btn-green {
+  @apply bg-green-500 text-white py-3 px-2 cursor-pointer text-center mx-auto rounded-sm font-graphik-medium text-sm;
+}
+.btn-primary {
+  @apply cursor-pointer bg-secondary text-center text-white rounded-sm font-graphik-medium;
+}
+
+/* assets */
+.asset-name {
+  @apply flex justify-start items-center space-x-4;
+}
+.asset-name > h6 {
+  @apply text-lg font-graphik;
+}
+.asset-name > h5 {
+  @apply text-lg text-gray-400 font-graphik;
+}
+.asset-index {
+  @apply text-center text-lg font-graphik;
+}
+.asset-price {
+  @apply text-center text-lg font-graphik;
+}
+.asset-change {
+  @apply text-red-400 text-center text-lg font-graphik;
+}
+
+/* table */
+.table-header {
+  @apply p-4 border-b border-gray-300 text-gray-400 font-graphik font-normal;
+}
+
+.table-header-item {
+  @apply border-b border-gray-300 text-gray-400 font-graphik font-normal;
+}
+.table-content-item {
+  @apply border-b border-gray-300 p-0 m-0 ;
+}
+
+/* earning */
+.icon-earning {
+  @apply w-9 h-9;
+}
+.earnings-list-item {
+  @apply flex justify-between items-center w-full px-4 py-6 bg-white rounded-md hover:shadow-lg transition duration-150 cursor-pointer;
+}
+
+/* banner */
+.banner-grid-item {
+  @apply flex flex-col justify-center items-center space-y-3 h-full w-full text-white;
+}
+
+.section {
+  @apply flex flex-col justify-center text-center w-full max-w-7xl mx-auto;
+}
