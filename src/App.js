@@ -543,8 +543,174 @@ function App() {
         </div>
       </div>
 
+      {/* earn */}
+      <div className="bg-primary overflow-hidden">
+              <div className="grid grid-cols-2">
+                {/* left */}
+                <div className="flex flex-col justify-center w-1/2 mx-auto space-y-4 px-5">
+                  <h2 className="text-3xl font-graphik-medium">
+                    Earn up to $28 worth of crypto
+                  </h2>
+                  <p className="text-sm font-graphik">
+                    Discover how specific cryptocurrencies work — and get a bit of
+                    each crypto to try out for yourself.
+                  </p>
+                  <div className="btn-primary text-sm w-1/3 py-2 rounded-sm">
+                    <p>Start earning</p>
+                  </div>
+                </div>
 
+          {/* right */}
+          <div className="">
+            <picture
+              className=""
+              srcset={
+                "https://assets.coinbase.com/assets/earn-upsell-desktop.dad0f473399e16fa8c176a9599c883ea.webp"
+              }
+              type="image/webp"
+            >
+              <img
+                src="https://assets.coinbase.com/assets/earn-upsell-desktop.852a74929173d0974480694525be02ab.jpg"
+                alt="Earn crypto while learning about crypto"
+                aria-label="Earn crypto while learning about crypto"
+                loading="lazy"
+              />
+            </picture>
+          </div>
+        </div>
+      </div>
 
+      {/* footer */}
+      <div className="footer flex h-full w-full box-border">
+        <div className="grid grid-cols-6 max-w-5xl box-border py-24 w-full mx-auto h-full">
+          {/* brand information */}
+          <div className="flex flex-col text-left col-span-2">
+            {/* logo */}
+            <img
+              src={
+                "https://images.ctfassets.net/q5ulk4bp65r7/3TBS4oVkD1ghowTqVQJlqj/2dfd4ea3b623a7c0d8deb2ff445dee9e/Consumer_Wordmark.svg"
+              }
+              alt="brand"
+              className="brand-footer"
+            />
+
+            {/* language selector */}
+            <select
+              name="languages"
+              id="languages"
+              className="mt-9 w-2/3 p-2 border border-gray-200 focus:ring ring-offset-secondary rounded-md outline-none focus:text-secondary"
+            >
+              <option value="de">Deutsch</option>
+              <option selected="" value="en">
+                English
+              </option>
+              <option value="es">Español - España</option>
+              <option value="es-LA">Español - América Latina</option>
+              <option value="fr">Français - France</option>
+              <option value="id">Bahasa Indonesia</option>
+              <option value="it">Italiano</option>
+              <option value="ko">한국어</option>
+              <option value="pl">Polski</option>
+              <option value="pt">Português - Brasil</option>
+              <option value="pt-PT">Português - Portugal</option>
+              <option value="ru">Pусский</option>
+              <option value="th">ไทย</option>
+              <option value="tr">Türkçe</option>
+            </select>
+
+            <div className="flex flex-col mt-6 space-y-1">
+              <p className="text-gray-500">
+                &copy; {new Date().getFullYear()} Coinbase
+              </p>
+              <div className="flex items-center space-x-1">
+                <a href="#blog" className="">
+                  <p className="text-gray-500 hover:text-secondary transition duration-150">
+                    Blog
+                  </p>
+                </a>
+                <span className="text-gray-500">•</span>
+                <a href="#twitter" className="">
+                  <p className="text-gray-500 hover:text-secondary transition duration-150">
+                    Twitter
+                  </p>
+                </a>
+                <span className="text-gray-500">•</span>
+                <a href="#facebook" className="">
+                  <p className="text-gray-500 hover:text-secondary transition duration-150">
+                    Facebook
+                  </p>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          {/* navigation links */}
+          <div className="col-span-4 grid grid-cols-3 gap-x-4">
+            {/* left */}
+            <div className="flex flex-col space-y-5">
+              {kFooterCategories.slice(0, 2).map((item, index) => (
+                <div key={index} className="flex flex-col space-y-1">
+                  <h6 className="font-graphik-medium text-sm">{item.title}</h6>
+                  {item.submenus.map((menu, menuIndex) => (
+                    <a
+                      key={menuIndex}
+                      href={`#${menu
+                        .toLocaleLowerCase()
+                        .replace(" ", "-")
+                        .replace("&", "")}`}
+                      className="font-graphik text-gray-400 text-sm hover:text-blue-600 hover:underline transition duration-150"
+                    >
+                      {menu}
+                    </a>
+                  ))}
+                </div>
+              ))}
+            </div>
+
+            {/* middle */}
+            <div className="flex flex-col space-y-5">
+              {kFooterCategories.slice(2, 5).map((item, index) => (
+                <div key={index} className="flex flex-col space-y-1">
+                  <h6 className="font-graphik-medium text-sm">{item.title}</h6>
+                  {item.submenus.map((menu, menuIndex) => (
+                    <a
+                      key={menuIndex}
+                      href={`#${menu
+                        .toLocaleLowerCase()
+                        .replace(" ", "-")
+                        .replace("&", "")}`}
+                      className="font-graphik text-gray-400 text-sm hover:text-blue-600 hover:underline transition duration-150"
+                    >
+                      {menu}
+                    </a>
+                  ))}
+                </div>
+              ))}
+            </div>
+
+            {/* right */}
+            <div className="flex flex-col space-y-5">
+              {kFooterCategories.slice(5).map((item, index) => (
+                <div key={index} className="flex flex-col space-y-1">
+                  <h6 className="font-graphik-medium text-sm">{item.title}</h6>
+                  {item.submenus.map((menu, menuIndex) => (
+                    <a
+                      key={menuIndex}
+                      href={`#${menu
+                        .toLocaleLowerCase()
+                        .replace(" ", "-")
+                        .replace("&", "")}`}
+                      className="font-graphik text-gray-400 text-sm hover:text-blue-600 hover:underline transition duration-150"
+                    >
+                      {menu}
+                    </a>
+                  ))}
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>  
+     </div>
     </div>
 
   );
