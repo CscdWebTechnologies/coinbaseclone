@@ -27,7 +27,7 @@ function App() {
             </a>
             <a href="#page" className="nav-link-item relative">
               <p className="font-mediumbold font-graphik text-sm">Learn</p>
-              
+
             </a>
             <a href="#page" className="nav-link-item relative">
               <p className="font-mediumbold font-graphik text-sm">Individuals</p>
@@ -330,10 +330,223 @@ function App() {
           </a>
         </div>
       </div>
-
-     
+      {/* portfolio */}
+      <div className="flex flex-col justify-center text-center w-full max-w-7xl mx-auto">
+        <h1 className="font-graphik-medium text-4xl mb-2">
+          Create your cryptocurrency portfolio today
+        </h1>
+        <p className="text-gray-500 my-4 font-graphik">
+          Coinbase has a variety of features that make it the best place to
+          start trading
+        </p>
+        <div className="grid w-full grid-cols-6 gap-x-4 mt-14">
+          {/* portfolio */}
+          <div className="flex flex-col space-y-12 col-span-2">
+            {kPortfolio.map((item, index) => (
+              <div className="flex space-x-7">
+                {/* <img
+                  src={item.icon}
+                  alt={item.title}
+                  className="portfolio-item-icon"
+                /> */}
+                <div className="bg-white shadow-md w-20 h-20 flex-shrink-0 rounded-full flex items-center justify-center">
+                  <svg
+                    className="w-8 h-8"
+                    width="36"
+                    height="36"
+                    viewBox="0 0 36 36"
+                    fill="none"
+                  >
+                    <path d="M36 2.25H0v31.5h36V2.25z" fill="#D4EEFF"></path>
+                    <path
+                      d="M28.125 36H7.875a1.128 1.128 0 01-1.125-1.125V1.125C6.75.506 7.256 0 7.875 0h20.25c.618 0 1.125.506 1.125 1.125v33.75c0 .619-.507 1.125-1.125 1.125z"
+                      fill="#56B4FC"
+                    ></path>
+                    <path
+                      d="M29.25 2.25H6.75v31.5h22.5V2.25z"
+                      fill="#1652F0"
+                    ></path>
+                    <path
+                      d="M23 15.137L21.889 14l-6.667 6.822 1.11 1.137L23 15.137z"
+                      fill="#fff"
+                    ></path>
+                    <path
+                      d="M16.334 22l1.11-1.137-3.333-3.411-1.11 1.137L16.333 22z"
+                      fill="#fff"
+                    ></path>
+                    <path
+                      d="M23.625 3.375h-11.25a1.128 1.128 0 01-1.124-1.125V1.125h13.5V2.25c0 .619-.507 1.125-1.126 1.125z"
+                      fill="#56B4FC"
+                    ></path>
+                    <path
+                      d="M15.75 32.063c0 .337.226.562.563.562h3.375c.338 0 .563-.225.563-.562 0-.338-.226-.563-.563-.563h-3.375c-.337 0-.562.225-.562.563z"
+                      fill="#fff"
+                    ></path>
+                  </svg>
+                </div>
+                <div className="flex flex-col text-left">
+                  <h6 className="font-graphik-medium text-xl mb-3">
+                    {item.title}
+                  </h6>
+                  <p className="font-graphik text-gray-500">
+                    {item.description}
+                  </p>
+                </div>
+              </div>
+            ))}
           </div>
-        
+          {/* image */}
+          <div className="flex items-center justify-center col-span-4">
+            <img
+              src={
+                "https://assets.coinbase.com/assets/coinbase-app.51b8f3dbe406092d16845f3e74870061.jpg"
+              }
+              alt="portfolio"
+              className="portfolio-image"
+            />
+          </div>
+        </div>
+      </div>
+
+      {/* cryptocurrency */}
+      <div className="section border-t border-gray-300">
+        <h1 className="font-graphik-medium text-4xl mb-2">
+          The most trusted cryptocurrency platform
+        </h1>
+        <p className="text-gray-500 my-4 font-graphik">
+          Here are a few reasons why you should choose Coinbase
+        </p>
+        <div className="grid w-full grid-cols-3 gap-x-4 mt-24">
+          {/* item 1: secure storage */}
+          <div className="flex flex-col space-y-4 items-center px-6">
+            <svg width="64" height="64" viewBox="0 0 64 64" fill="none">
+              <path d="M56 0H8v50h48V0z" fill="#BFE9FF"></path>
+              <path d="M64 10H0v48h64V10z" fill="#56B4FC"></path>
+              <path d="M56 10H8v40h48V10z" fill="#1652F0"></path>
+              <path d="M10 16H6v8h4v-8zM10 36H6v8h4v-8z" fill="#1652F0"></path>
+              <path d="M64 58h-8v6h8v-6zM8 58H0v6h8v-6z" fill="#56B4FC"></path>
+              <path
+                d="M41.19 20.81c-5.07-5.07-13.32-5.07-18.38 0-5.06 5.07-5.07 13.32 0 18.38 2.53 2.53 5.86 3.8 9.19 3.8 3.33 0 6.66-1.27 9.19-3.8 5.07-5.07 5.07-13.31 0-18.38zM32 19c2.5 0 5 .85 7.04 2.55l-2.85 2.85A6.99 6.99 0 0032 23c-1.53 0-2.98.5-4.19 1.4l-2.85-2.85A11.03 11.03 0 0132 19zm3.54 14.54c-.95.94-2.2 1.46-3.54 1.46-1.34 0-2.59-.52-3.54-1.46A4.952 4.952 0 0127 30c0-1.33.52-2.59 1.46-3.54.94-.95 2.2-1.46 3.54-1.46 1.34 0 2.59.52 3.54 1.46.95.94 1.46 2.21 1.46 3.54s-.52 2.59-1.46 3.54zM23.55 22.96l2.85 2.85A6.99 6.99 0 0025 30c0 1.53.5 2.98 1.4 4.19l-2.85 2.85a11.018 11.018 0 010-14.08zm1.41 15.49l2.85-2.85a6.969 6.969 0 008.38 0l2.85 2.85a11.018 11.018 0 01-14.08 0zm15.49-1.41l-2.85-2.85c.9-1.2 1.4-2.65 1.4-4.19 0-1.53-.5-2.98-1.4-4.19l2.85-2.85a11.018 11.018 0 010 14.08z"
+                fill="#fff"
+              ></path>
+            </svg>
+            <h2 className="mt-20 mb-4 text-xl font-graphik-medium">
+              Secure storage
+            </h2>
+            <p className="mb-6 font-graphik text-base">
+              We store the vast majority of the digital assets in secure offline
+              storage.
+            </p>
+            <a href="#cryptocurrency">
+              <div className="flex items-center justify-center">
+                <p className="font-graphik-medium text-sm text-blue-700">
+                  Learn how Coinbase keeps your funds safe and secure
+                </p>
+                <HiChevronRight className="text-blue-700" />
+              </div>
+            </a>
+          </div>
+
+          {/* item 2:  */}
+          <div className="flex flex-col space-y-4 items-center px-6">
+            <svg width="64" height="64" viewBox="0 0 64 64" fill="none">
+              <path
+                d="M56 56h-8v8h8c4.42 0 8-3.58 8-8h-8z"
+                fill="#BFE9FF"
+              ></path>
+              <path
+                d="M48 56V0H0v56c0 4.42 3.58 8 8 8h48c-4.42 0-8-3.58-8-8z"
+                fill="#56B4FC"
+              ></path>
+              <path
+                d="M48 56H0c0 4.42 3.58 8 8 8h48c-4.42 0-8-3.58-8-8z"
+                fill="#1652F0"
+              ></path>
+              <path
+                d="M40 30H8v2h32v-2zM40 36H8v2h32v-2zM40 42H8v2h32v-2zM32 48H16v2h16v-2zM23.5 24.66l-3.24-5.92-5.92-3.24 5.92-3.24 3.24-5.92 3.24 5.92 5.92 3.24-5.92 3.24-3.24 5.92zm-4.99-9.16l3.22 1.76 1.76 3.22 1.76-3.22 3.22-1.76-3.22-1.76-1.76-3.22-1.76 3.22-3.22 1.76z"
+                fill="#fff"
+              ></path>
+            </svg>
+            <h2 className="mt-20 mb-4 text-xl font-graphik-medium">
+              Protected by insurance
+            </h2>
+            <p className="mb-6 font-graphik text-base">
+              Cryptocurrency stored on our servers is covered by our insurance
+              policy.
+            </p>
+            <a href="#cryptocurrency">
+              <div className="flex items-center justify-center">
+                <p className="font-graphik-medium text-sm text-blue-700">
+                  Learn how your crypto is covered by our insurance policy
+                </p>
+                <HiChevronRight className="text-blue-700" />
+              </div>
+            </a>
+          </div>
+
+          {/* item 3: Industry best practices */}
+          <div className="flex flex-col space-y-4 items-center px-6">
+            <svg width="56" height="64" viewBox="0 0 56 64" fill="none">
+              <path d="M56 0H24v64h32V0z" fill="#BFE9FF"></path>
+              <path
+                d="M0 8v28c0 13.25 24 24 24 24s24-10.75 24-24V8H0z"
+                fill="#56B4FC"
+              ></path>
+              <path d="M24 8v52s24-10.75 24-24V8H24z" fill="#1652F0"></path>
+              <path
+                d="M7 15v21c0 4.92 8.57 11.72 16.53 15.97l.47.25.47-.25C32.43 47.72 41 40.92 41 36V15H7zm32 2v6H9v-6h30zM24 49.95C15.55 45.35 9 39.28 9 36V25h30v11c0 3.28-6.55 9.35-15 13.95z"
+                fill="#fff"
+              ></path>
+            </svg>
+            <h2 className="mt-20 mb-4 text-xl font-graphik-medium">
+              Industry best practices
+            </h2>
+            <p className="mb-6 font-graphik text-base">
+              Coinbase supports a variety of the most popular digital
+              currencies.
+            </p>
+            <a href="#cryptocurrency">
+              <div className="flex items-center justify-center">
+                <p className="font-graphik-medium text-sm text-blue-700">
+                  Learn how we implement industry best practices for account
+                  security
+                </p>
+                <HiChevronRight className="text-blue-700" />
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      {/* banner */}
+      <div className="flex justify-center bg-blue-700">
+        <div className="flex flex-row justify-center items-center flex-grow flex-shrink mx-auto w-full max-w-6xl p-6">
+          {/* item 1 */}
+          <div className="banner-grid-item">
+            <h1 className="text-6xl font-graphik-medium">$335B</h1>
+            <p className="font-graphik text-gray-300">
+              Quarterly volume traded
+            </p>
+          </div>
+
+          {/* item 2 */}
+          <div className="banner-grid-item">
+            <h1 className="text-6xl font-graphik-medium">100+</h1>
+            <p className="font-graphik text-gray-300">Countries supported</p>
+          </div>
+
+          {/* item 3 */}
+          <div className="banner-grid-item">
+            <h1 className="text-6xl font-graphik-medium">56+M</h1>
+            <p className="font-graphik text-gray-300">Verified users</p>
+          </div>
+        </div>
+      </div>
+
+
+
+    </div>
+
   );
 }
 
